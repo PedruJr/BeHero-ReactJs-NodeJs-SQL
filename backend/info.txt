@@ -1,0 +1,31 @@
+- Celebrate: biblioteca de validações: npm install celebrate
+- As validações ficam nas rotas de criação e rotas de alteração, e Paginação
+- precisamos adicionar um parametro na rota: celebrate(), podemos adicionar varias validações
+- validações dos paramentros query, route, body
+- precisamos evitar ao maximo o erro 500 tratamos com o require error no index, que carrega erros mais detalhados
+- podemos usar os errors para otimização das validaçoes no front end
+- no caso de verificação de profile, onde o id é enviado por header, poderiamos usar o regex e o uuid para verificar o id
+- TDD Test-Driven Development desenvolvimento dirigido a <i class="fas fa-tachometer-fastest    "></i>
+- Express: biblioteca de gerenciamento de backend
+- JEST frameworks de testes node, js, react
+- jest.config .js api do jest ensina como usar o describe it expect
+
+- precisamos criar um banco de dados especificos para os testes
+- criamos um novo nas configurações do knexfile.js, copiamos o development e chamamos de test mudando o filename
+- precisamos tambem programar o connection para usar o banco de testes se estivermos testando.
+- utilizamos o NPM install cross-env e configuramos no package.json
+- package json> "test": "cross-env NODE-ENV=test jest"
+- NODE-ENV variavel de ambiente que podemos ter acesso dentro do node
+- acessamos as variaveis ambiente com "const config = process.env.NODE_ENV === 'test' ? configuration.test : configuration.development";
+- entao colocamos a variavel de configuração na configs do knex
+  
+- Agora criando  o primeiro teste de integração
+- precisamos de uma biblioteca de chamadas api para os testes (não poode ser o axios ja que ele é somente para front end)
+- adicionaremos a biblioteca "supertest" faz validaçoes a mais e comandos http (importamos no ong.spec.js: const request = require('supertest');
+- npm instal supertest -d
+- precisamos trocar a porta de listen do servidor test, para uma onde apenas o test tenha acesso
+- trocamos o index.js por app.js (no package.json precisamos trocar o index por server.js: "start": "nodemon src/server.js"), e criamos um arquivor server.js
+- proximo passo é apagar o listen(3333) e exportar o app.
+- e importamos no server, e configuramos o listen na porta 3333
+- e importamos no test, sem configurar a porta de listen
+- antes de executar os testes precisamos fazer ele aplicar as migrations no banco de dados

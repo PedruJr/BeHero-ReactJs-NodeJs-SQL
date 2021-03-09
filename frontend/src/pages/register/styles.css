@@ -1,0 +1,58 @@
+.register-container {
+    width: 100%;
+    max-width: 1120px;
+    height: 100vh;/* altura completo*/
+    margin: 0 auto; /* centro da tela */
+
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+}
+
+.register-content {
+    width: 100%;
+    padding: 96px;
+    background: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1); /* box shadow com opacidade no ultima prop de RGBA */
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register-content section {
+    width: 100%;
+    max-width: 380px;
+    margin-right: 20px;
+}
+
+.register-content section p {
+   font-size: 18px;
+   color: #737380;
+   line-height: 32px;
+   text-align: left;
+}
+
+.register-content section img {
+    margin-left: 50px;
+}
+
+.register-content form {
+   width: 100%;
+   max-width: 450px;
+ }
+
+
+
+ .register-content form input {
+    margin-top: 8px;
+  }
+
+  .input-group {
+    display: flex;
+  }
+
+  .input-group input + input{ /* em caso de 2 inputs no mesmo div para dar espaçamento entre */
+      margin-left: 8px;
+  }
